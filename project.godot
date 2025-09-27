@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="daydream"
+run/main_scene="uid://jewvhccjdguv"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[global_group]
+
+enemy=""
+player=""
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.294118, 0.447059, 0.431373, 1)

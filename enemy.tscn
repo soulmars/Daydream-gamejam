@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://df6eue27gk0uk"]
+[gd_scene load_steps=3 format=3 uid="uid://df6eue27gk0uk"]
 
-[node name="enemy" type="CharacterBody2D"]
+[ext_resource type="Texture2D" uid="uid://dis1io2nnikmb" path="res://New Piskel (23).png" id="1_7k104"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
+size = Vector2(14.6226, 17.8333)
+
+[node name="enemy" type="CharacterBody2D" groups=["enemy"]]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.500001, 8.5)
+scale = Vector2(6.36, 6)
+shape = SubResource("RectangleShape2D_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 129
+position = Vector2(0, -6)
+scale = Vector2(5, 5)
+texture = ExtResource("1_7k104")
