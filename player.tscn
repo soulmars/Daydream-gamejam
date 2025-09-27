@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://j0ucholn0kok"]
+
+[ext_resource type="Script" uid="uid://cqhmu7ymcr06g" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bhtqsx8yoli1r" path="res://New Piskel (2).png" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://bbm4y8upw28t7" path="res://New Piskel (3).png" id="3_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://bj6ef7a773wth" path="res://New Piskel (4).png" id="4_dw050"]
+[ext_resource type="Texture2D" uid="uid://c5xlil5vf7u2m" path="res://New Piskel (5).png" id="5_b26j0"]
+[ext_resource type="Texture2D" uid="uid://4hw3vu6yhgxh" path="res://New Piskel (1).png" id="6_n7ghd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(14.6226, 17.8333)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(2.5, 6.5)
+scale = Vector2(6.36, 6)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="no limbs" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-7, 12)
+scale = Vector2(5, 5)
+texture = ExtResource("2_2hs0m")
+
+[node name="1 arm" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-5.9999995, 12.999998)
+scale = Vector2(5, 5)
+texture = ExtResource("3_1jxqw")
+
+[node name="2 arm" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-8.999999, 10.999998)
+scale = Vector2(5, 5)
+texture = ExtResource("4_dw050")
+
+[node name="3 limbs" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-4, 17)
+scale = Vector2(5, 5)
+texture = ExtResource("5_b26j0")
+
+[node name="4 limbs" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-8, 14)
+scale = Vector2(5, 5)
+texture = ExtResource("6_n7ghd")
