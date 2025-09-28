@@ -1,12 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://jewvhccjdguv"]
+[gd_scene load_steps=4 format=3 uid="uid://jewvhccjdguv"]
 
 [ext_resource type="PackedScene" uid="uid://df6eue27gk0uk" path="res://enemy.tscn" id="1_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://j0ucholn0kok" path="res://player.tscn" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://cw35c7t1jus3c" path="res://New Piskel (32).png" id="1_feb5d"]
+[ext_resource type="PackedScene" uid="uid://d3yfi0kdan7a4" path="res://player.tscn" id="2_feb5d"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="NewPiskel(32)" type="Sprite2D" parent="."]
+position = Vector2(582, 304)
+scale = Vector2(10.4297, 9.52778)
+texture = ExtResource("1_feb5d")
 
 [node name="enemy" parent="." instance=ExtResource("1_e2o6t")]
 position = Vector2(868, 335)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_feb5d")]
 position = Vector2(273, 337)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(0.431865, 1, 0.400656, 0.984314)
+offset_left = 12.0
+offset_top = 25.0
+offset_right = 398.0
+offset_bottom = 52.0
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1155, 2, 1160, 653, -2, 645, -2, 2, 1160, -3, 1129, -164, -77, -169, -85, 827, 1293, 759, 1246, -195, 1132, -174)
